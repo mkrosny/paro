@@ -1,4 +1,9 @@
 0. Kompilacja projektu:
+    > chmod +x install_packages.sh
+    > su (hasło: nokia)
+    > ./install_packages.sh
+    > apt-get install valgrind
+    > exit
     > mkdir build
     > cd build
     > cmake ..
