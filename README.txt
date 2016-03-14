@@ -13,11 +13,12 @@ Rada: Używaj gita. Rób commit co każdy punkt/podpunkt.
 
 2. Uruchom valgrind2 i analogicznie użyj valgrinda aby sprawdzić wycieki pamięci. Popraw program.
 
-3. Uruchom valgrind3 i sprawdź czy są w nim wycieki pamięci. Popraw program.
+3. Uruchom valgrind3 i sprawdź czy są w nim wycieki pamięci. 
+a) napisz własną klasę wyjatków dziedziczącą po logic_error, i użyj jej w kodzie zamiast logic_error
+b) popraw program.
+c) zmień kod w pliku valgrind3.cpp tak, aby używał unique_ptr.
 
-4. Zmień kod w pliku valgrind3.cpp tak, aby używał unique_ptr.
-
-5. Zajrzyj do pliku list.cpp, gdzie zaimplementowana jest prosta lista jednokierunkowa.
+4. Zajrzyj do pliku list.cpp, gdzie zaimplementowana jest prosta lista jednokierunkowa.
 Metoda add(Node* node) dodaje nowy węzeł zawsze na końcu listy.
 Aby dostać konkretny węzeł, metoda get(const int value) iteruje po liście od pierwszego jej elementu w kierunku ostatniego,
 przechodząc przez wszystkie elementy aż do napotkania tego, który chcemy zwrócić.
@@ -29,14 +30,14 @@ e) Stwórz własne wyjątki EmptyListError i NotFoundError, oba dziedziczące po
 
 
 Praca domowa - dla osób, które chcą poćwiczyć, przyda się do kolokwium :)
-6. Przekształć listę jednokierunkową z pliku list.cpp w listę dwukierunkową. Ma ona umożliwiać:
+5. Przekształć listę jednokierunkową z pliku list.cpp w listę dwukierunkową. Ma ona umożliwiać:
   - wstawianie elementów na początek listy: void addFirst(shared_ptr<Node> node);
   - szukanie elementów od końca listy: shared_ptr<Node> getBackward(const int value)
 
-7. Czy da się zmienić metody listy tak, aby przyjmowały/zwracały unique_ptr zamiast shared_ptr?
+6. Czy da się zmienić metody listy tak, aby przyjmowały/zwracały unique_ptr zamiast shared_ptr?
    Co będzie konsekwencją takiej zmiany? Podpowiedź: co się stanie z elementem listy, gdy metoda get zwróci go jako unique_ptr?
 
-8. Przekształć klasy List i Node w klasy szablonowe, aby można było przechowywać dane takiego typu jak parametr szablonu.
+7. Przekształć klasy List i Node w klasy szablonowe, aby można było przechowywać dane takiego typu jak parametr szablonu.
    Przykład dla typu string:
   
     List<string> lista;
