@@ -17,6 +17,7 @@ Rada: Używaj gita. Rób commit co każdy punkt/podpunkt.
 a) napisz własną klasę wyjatków dziedziczącą po logic_error, i użyj jej w kodzie zamiast logic_error
 b) popraw program.
 c) zmień kod w pliku valgrind3.cpp tak, aby używał unique_ptr.
+d) użyj make_unique tam gdzie to możliwe.
 
 4. Zajrzyj do pliku list.cpp, gdzie zaimplementowana jest prosta lista jednokierunkowa.
 Metoda add(Node* node) dodaje nowy węzeł zawsze na końcu listy.
