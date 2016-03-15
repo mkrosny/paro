@@ -5,11 +5,11 @@ apt-get -y install cmake
 apt-get -y install libboost-all-dev
 apt-get -y install google-mock
 apt-get -y install qtcreator
-apt-get -y install binutils
+apt-get -y install valgrind gcovr ggcov kcov kcachegrind binutils
+apt-get -y install cppcheck
 apt-get -y install git
 apt-get -y install htop
 apt-get -y install linux-tools
-apt-get -y install valgrind
 
 #ustawienie 2 procesorow na maszynie
 #uzytkownik: nokia, haslo: nokia

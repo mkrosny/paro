@@ -2,7 +2,6 @@
     > chmod +x install_packages.sh
     > su (hasło: nokia)
     > ./install_packages.sh
-    > apt-get install valgrind
     > exit
     > mkdir build
     > cd build
@@ -18,11 +17,11 @@ Rada: Używaj gita. Rób commit co każdy punkt/podpunkt.
 
 2. Uruchom valgrind2 i analogicznie użyj valgrinda aby sprawdzić wycieki pamięci. Popraw program.
 
-3. Uruchom valgrind3 i sprawdź czy są w nim wycieki pamięci. 
-a) napisz własną klasę wyjatków dziedziczącą po logic_error, i użyj jej w kodzie zamiast logic_error
-b) popraw program.
+3. Uruchom valgrind3 i sprawdź czy są w nim wycieki pamięci.
+a) napisz własną klasę wyjatków dziedziczącą po logic_error i użyj jej w kodzie zamiast logic_error
+b) popraw wyciek pamięci w programie
 c) zmień kod w pliku valgrind3.cpp tak, aby używał unique_ptr.
-d) użyj make_unique tam gdzie to możliwe.
+d) użyj make_unique tam, gdzie to możliwe.
 
 4. Zajrzyj do pliku list.cpp, gdzie zaimplementowana jest prosta lista jednokierunkowa.
 Metoda add(Node* node) dodaje nowy węzeł zawsze na końcu listy.
@@ -45,11 +44,12 @@ Praca domowa - dla osób, które chcą poćwiczyć, przyda się do kolokwium :)
 
 7. Przekształć klasy List i Node w klasy szablonowe, aby można było przechowywać dane takiego typu jak parametr szablonu.
    Przykład dla typu string:
-  
+
     List<string> lista;
     auto nodeNapis = make_shared<Node<string>>("napis");
     auto nodeHello = make_shared<Node<string>>("hello");
-  
+
     lista.add(nodeNapis);
     lista.add(nodeHello);
     auto node = lista.get("text");
+
