@@ -34,7 +34,9 @@ d) zastosuj inteligentne wskaźniki w miejsce natywnych wskaźników
 e) Stwórz własne wyjątki EmptyListError i NotFoundError, oba dziedziczące po std::runtime_error. Dodaj rzucanie i łapanie ich w odpowiednich miejsach.
 
 
-Praca domowa - dla osób, które chcą poćwiczyć, przyda się do kolokwium :)
+Przykładowe rozwiązania powyższych zadań znajdują się na branchu solutions
+
+PRACA DOMOWA - dla osób, które chcą poćwiczyć, przyda się do kolokwium :)
 5. Przekształć listę jednokierunkową z pliku list.cpp w listę dwukierunkową. Ma ona umożliwiać:
   - wstawianie elementów na początek listy: void addFirst(shared_ptr<Node> node);
   - szukanie elementów od końca listy: shared_ptr<Node> getBackward(const int value)
