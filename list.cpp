@@ -9,7 +9,9 @@ public:
         next(nullptr),
         value(v)
     {}
-
+    ~Node(){
+	delete next;
+    }
     Node* next;
     int value;
 };
@@ -18,6 +20,9 @@ class List
 {
 public:
     List();
+    ~List(){
+	delete first;
+    }
     void add(Node* node);        // dodaje element na koniec listy
     Node* get(const int value);  // zwraca element o wskazanej wartości
 
@@ -85,7 +90,7 @@ int main()
     lista.add(node7);
     lista.add(new Node(9));
     auto node = lista.get(1);
-
+    auto node2 = lista.get(7);
     return 0;
 }
 
