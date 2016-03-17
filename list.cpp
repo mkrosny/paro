@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <memory>
+//TODO inteligentne wskazniki - readme
 using namespace std;
 
 class Node
