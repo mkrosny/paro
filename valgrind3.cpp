@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdexcept>
+#include <memory>
 
 using namespace std;
 
@@ -21,7 +22,6 @@ public:
         if (*N == 'd')
         {
 	throw DError("Passed d. d is prohibited");
-            //throw logic_error("Passed d. d is prohibited.");
         }
     };
 };
@@ -34,18 +34,15 @@ int main(int argc, char* argv[])
         exit(-1);
     }
     const char* N = argv[1];
-    Resource* rsc = nullptr; //unique_ptr<Resource>
 
     try
     {
-        rsc = new Resource(); //new unique_ptr<Resource>(new Resource);
+        auto rsc = unique_ptr<Resource> (new Resource);
         rsc->use(N);
-        //delete rsc;
     }
-    catch (DError & e) //catch (logic_error & e)
+    catch (DError & e)
     {
         cout << e.what() << endl;
-	//delete rsc;
     }
     return 0;
 }
