@@ -1,0 +1,7 @@
+/home/nokia/Pobrane/build/CMakeFiles/cheap.dir
+/home/nokia/Pobrane/build/CMakeFiles/dup.dir
+/home/nokia/Pobrane/build/gmock-1.7.0/CMakeFiles/gmock.dir
+/home/nokia/Pobrane/build/gmock-1.7.0/CMakeFiles/gmock_main.dir
+/home/nokia/Pobrane/build/gmock-1.7.0/gtest/CMakeFiles/gtest.dir
+/home/nokia/Pobrane/build/gmock-1.7.0/gtest/CMakeFiles/gtest_main.dir
+/home/nokia/Pobrane/build/CMakeFiles/pow2.dir

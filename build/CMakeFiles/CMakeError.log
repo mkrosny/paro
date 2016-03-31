@@ -1,0 +1,57 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nokia/Pobrane/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec274250601/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec274250601.dir/build.make CMakeFiles/cmTryCompileExec274250601.dir/build
+make[1]: Wejście do katalogu '/home/nokia/Pobrane/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nokia/Pobrane/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec274250601.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec274250601.dir/CheckSymbolExists.c.o   -c /home/nokia/Pobrane/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec274250601
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec274250601.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec274250601.dir/CheckSymbolExists.c.o  -o cmTryCompileExec274250601 -rdynamic 
+CMakeFiles/cmTryCompileExec274250601.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec274250601.dir/build.make:88: polecenia dla obiektu 'cmTryCompileExec274250601' nie powiodły się
+make[1]: Opuszczenie katalogu '/home/nokia/Pobrane/build/CMakeFiles/CMakeTmp'
+Makefile:118: polecenia dla obiektu 'cmTryCompileExec274250601/fast' nie powiodły się
+make[1]: *** [cmTryCompileExec274250601] Błąd 1
+make: *** [cmTryCompileExec274250601/fast] Błąd 2
+
+File /home/nokia/Pobrane/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nokia/Pobrane/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec765970835/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec765970835.dir/build.make CMakeFiles/cmTryCompileExec765970835.dir/build
+make[1]: Wejście do katalogu '/home/nokia/Pobrane/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nokia/Pobrane/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec765970835.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec765970835.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec765970835
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec765970835.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec765970835.dir/CheckFunctionExists.c.o  -o cmTryCompileExec765970835 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec765970835.dir/build.make:88: polecenia dla obiektu 'cmTryCompileExec765970835' nie powiodły się
+make[1]: Opuszczenie katalogu '/home/nokia/Pobrane/build/CMakeFiles/CMakeTmp'
+Makefile:118: polecenia dla obiektu 'cmTryCompileExec765970835/fast' nie powiodły się
+make[1]: *** [cmTryCompileExec765970835] Błąd 1
+make: *** [cmTryCompileExec765970835/fast] Błąd 2
+
+
