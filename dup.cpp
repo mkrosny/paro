@@ -10,11 +10,11 @@ vector<T> unique(vector<T> const& first, vector<T> const& second)
 {
     // TODO:      This function should join input vectors and return only unique elements.
     // Important: Use only containers! No algorithms allowed.
+    //    return vector<T>{};
 	set<T> s(first.begin(),first.end());
 	s.insert(second.begin(),second.end());
 	vector<T> third(s.begin(),s.end());
     return third;
-//    return vector<T>{};
 }
 
 TEST(DupTest, Test)
