@@ -10,7 +10,7 @@ apt-get -y install cppcheck
 apt-get -y install git
 apt-get -y install htop
 apt-get -y install linux-tools
-
+apt-get -y install emacs
 #ustawienie 2 procesorow na maszynie
 #uzytkownik: nokia, haslo: nokia
 #instalacje odpalac jako root (haslo nokia)
