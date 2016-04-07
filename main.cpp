@@ -6,12 +6,12 @@
 #include "Rectangle.hpp"
 #include "Square.hpp"
 #include "Circle.hpp"
-
+#include <memory>
 using namespace std;
 
-using Collection = vector<Shape*>;
+using Collection = vector<shared_ptr<Shape>>;
 
-auto sortByArea(Shape* first, Shape* second)
+auto sortByArea(shared_ptr<Shape> first, shared_ptr<Shape> second)
 {
     if(first == nullptr || second == nullptr)
     {
@@ -20,7 +20,7 @@ auto sortByArea(Shape* first, Shape* second)
     return (first->getArea() < second->getArea());
 }
 
-auto perimeterBiggerThan20(Shape* s)
+auto perimeterBiggerThan20(shared_ptr<Shape> s)
 {
     if(s)
     {
@@ -29,7 +29,7 @@ auto perimeterBiggerThan20(Shape* s)
     return false;
 }
 
-auto areaLessThan10(Shape* s)
+auto areaLessThan10(shared_ptr<Shape> s)
 {
     if(s)
     {
@@ -61,7 +61,7 @@ auto printAreas(const Collection& collection)
 }
 
 auto findFirstShapeMatchingPredicate(const Collection& collection,
-                                     bool (*predicate)(Shape* s),
+                                     bool (*predicate)(shared_ptr <Shape> s),
                                      std::string info)
 {
     Collection::const_iterator iter = std::find_if(collection.begin(), collection.end(), predicate);
@@ -79,13 +79,13 @@ auto findFirstShapeMatchingPredicate(const Collection& collection,
 int main()
 {
   Collection shapes {
-    new Circle(2.0),
-      new Circle(3.0),
+    make_shared<Circle>(2.0),
+      make_shared<Circle>(3.0),
       nullptr,
-      new Circle(4.0),
-      new Rectangle(10.0, 5.0),
-      new Square(3.0),
-      new Circle(4.0)};
+      make_shared< Circle>(4.0),
+      make_shared< Rectangle>(10.0, 5.0),
+      make_shared< Square>(3.0),
+      make_shared< Circle>(4.0)};
   
     printCollectionElements(shapes);
 
@@ -97,7 +97,7 @@ int main()
     cout << "Areas after sort: " << std::endl;
     printAreas(shapes);
 
-    Square* square = new Square(4.0);
+    shared_ptr<Square> square = make_shared<Square>(4.0);
     shapes.push_back(square);
 
     findFirstShapeMatchingPredicate(shapes, perimeterBiggerThan20, "perimeter bigger than 20");
