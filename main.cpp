@@ -9,7 +9,8 @@
 
 using namespace std;
 
-typedef vector<Shape*> Collection;
+//typedef vector<Shape*> Collection; //was
+using Collection = vector<Shape*>; //is
 
 bool sortByArea(Shape* first, Shape* second)
 {
