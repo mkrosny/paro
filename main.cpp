@@ -9,10 +9,9 @@
 
 using namespace std;
 
-//typedef vector<Shape*> Collection; //was
-using Collection = vector<Shape*>; //is
+using Collection = vector<Shape*>;
 
-bool sortByArea(Shape* first, Shape* second)
+auto sortByArea(Shape* first, Shape* second)
 {
     if(first == nullptr || second == nullptr)
     {
@@ -21,7 +20,7 @@ bool sortByArea(Shape* first, Shape* second)
     return (first->getArea() < second->getArea());
 }
 
-bool perimeterBiggerThan20(Shape* s)
+auto perimeterBiggerThan20(Shape* s)
 {
     if(s)
     {
@@ -30,7 +29,7 @@ bool perimeterBiggerThan20(Shape* s)
     return false;
 }
 
-bool areaLessThan10(Shape* s)
+auto areaLessThan10(Shape* s)
 {
     if(s)
     {
@@ -41,27 +40,27 @@ bool areaLessThan10(Shape* s)
 
 void printCollectionElements(const Collection& collection)
 {
-    for(Collection::const_iterator it = collection.begin(); it != collection.end(); ++it)
+    for(const auto &it: collection)
     {
-        if(*it != nullptr)
+        if(it != nullptr)
         {
-            (*it)->print();
+            it->print();
         }
     }
 }
 
-void printAreas(const Collection& collection)
+auto printAreas(const Collection& collection)
 {
-    for(vector<Shape*>::const_iterator it = collection.begin(); it != collection.end(); ++it)
+    for(const auto &it : collection)
     {
-        if(*it != nullptr)
+        if(it != nullptr)
         {
-            cout << (*it)->getArea() << std::endl;
+            cout << it->getArea() << std::endl;
         }
     }
 }
 
-void findFirstShapeMatchingPredicate(const Collection& collection,
+auto findFirstShapeMatchingPredicate(const Collection& collection,
                                      bool (*predicate)(Shape* s),
                                      std::string info)
 {
