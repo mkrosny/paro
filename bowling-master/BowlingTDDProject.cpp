@@ -59,6 +59,7 @@ namespace
 	  BOOST_CHECK_EQUAL(game.getScore(), 15);
 	}
 
+
   BOOST_AUTO_TEST_SUITE_END()
 }
 
