@@ -6,7 +6,19 @@
 class BowlingGame
 {
 public:
+   BowlingGame() {}
+   ~BowlingGame() {}
+   void roll(int pins)
+   {
+       score+=pins;
+   }
+   
+   int getScore()
+   {
+       return score;
+   }
 private:
+   int score;
 };
 
 #endif

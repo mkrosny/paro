@@ -11,8 +11,16 @@ namespace
 {
 	BOOST_AUTO_TEST_SUITE(BowlingGameTests)
 
-	BOOST_AUTO_TEST_CASE(testcase)
+	BOOST_AUTO_TEST_CASE(After20RollsWith0PinsScoreShouldBe0)
 	{
+	  BowlingGame game;
+	  
+	  for(int i= 0; i <20; ++i)
+	    {
+	      game.roll(0);
+	    }
+	  
+	  BOOST_CHECK_EQUAL(game.getScore(), 0);
 	}
 
 	BOOST_AUTO_TEST_SUITE_END()
