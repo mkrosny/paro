@@ -2,45 +2,85 @@
 #define BOWLING_GAME_H
 
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 
 class BowlingGame
 {
 public:
-   BowlingGame() {}
+   BowlingGame() {
+     srand (time(NULL));
+   }
    ~BowlingGame() {}
-   void roll(int pins)
+
+   void game(int p1,p2)
    {
        score+=pins;
        ++RollCount;
+   }
+      
+   void round()
+   {
+     score+=roll();
+     if(isStrike) {
+       strike=true;
+       score+=roll();
+     }
+
+     if(isSpare)
+       {
+       spare=true;
+       score+=roll();
+       }
+     
+
+     ++RoundCount;
+       
+     scores[RoundCount]=score;
+       
+     score=0;
+     strike=false;
+     spare=false;
+   }
+
+   int roll()
+   {
+       return rand() % 10 + 1;
    }
    
    int getScore()
    {
        return score;
    }
+
+   
    bool isSpare()
    {
-        if(RollCount==2)
-            if (getScore()>=10)
+     if (getScore()>=10)
 	 {
-	   spare++;
+	   spare=true;
 	   return true;
 	 }
+     return false;
    }
    bool isStrike()
    {
-     if(RollCount==1)
        if (getScore()>=10)
 	 {
 	   strike++;
 	   return true;
 	 }
+       return false;
    }
+   
 private:
+   int scores[10];
+   bool strike;
+   bool spare;
    int score;
-   int strike;
-   int spare;
+
    int RollCount;
+   int RoundCount;
 };
 
 #endif
