@@ -1,10 +1,14 @@
 #pragma once
-#include <Rectangle.hpp>
+#include <Shape.hpp>
 
 
-class Square: public Rectangle
+class Square: public Shape
 {
 public:
-    void setHeight(double x){height =x; width =x;}
-    void setWidth(double x){height =x; width =x;}
+  //    void setHeight(double x){height =x; width =x;}
+  //    void setWidth(double x){height =x; width =x;}
+  void setSide(double x) side = x;
+  double calculateArea(){return side*side;}
+protected:
+  double side;
 };

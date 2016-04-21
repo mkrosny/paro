@@ -3,37 +3,37 @@
 #include <memory>
 #include <Rectangle.hpp>
 
-typedef std::vector<std::shared_ptr<Rectangle>> Rectangles;
+typedef std::vector<std::shared_ptr<Shape>> Shapes;
 
 class GeometricCalculator
 {
 public:
-    GeometricCalculator(Rectangles rect)
-        :rectangles(rect)
-    {
-        initRectangles();
-    }
+    // GeometricCalculator(Shape shap)
+    //     :rectangles(rect)
+    // {
+    //     initRectangles();
+    // }
 
     double calculateSumArea()
     {
         double sum = 0;
 
-        for(auto rect: rectangles)
+        for(auto rect: shapes)
         {
             sum += rect->calculateArea();
         }
         return sum;
     }
+    //private:
+    // void initRectangles()
+    // {
+    //     for(auto rect: shapes)
+    //     {
+    //         rect->setHeight(10);
+    //         rect->setWidth(5);
+    //     }
+    // }
 private:
-    void initRectangles()
-    {
-        for(auto rect: rectangles)
-        {
-            rect->setHeight(10);
-            rect->setWidth(5);
-        }
-    }
-private:
-    Rectangles rectangles;
+  vector<Shape> shapes;
 };
 

@@ -7,13 +7,14 @@
 
 int main()
 {
-   Rectangles rectangles;
-   rectangles.push_back(std::make_shared<Rectangle>());
-   rectangles.push_back(std::make_shared<Rectangle>());
-   rectangles.push_back(std::make_shared<Square>());
-   rectangles.push_back(std::make_shared<Square>());
+  Shapes shapes;
+   shapes.push_back(std::make_shared<Rectangle>());
+   //todo: constructors in classes
+   shapes.push_back(std::make_shared<Rectangle>());
+   shapes.push_back(std::make_shared<Square>());
+   shapes.push_back(std::make_shared<Square>());
 
-   GeometricCalculator geometricCalculator(rectangles);
+   GeometricCalculator geometricCalculator(shapes);
    std::cout<<"summed area is equal: " << geometricCalculator.calculateSumArea() << std::endl;
 
 }

@@ -1,6 +1,7 @@
 #pragma once
+#include <Shape.hpp>
 
-class Rectangle
+class Rectangle:Shape
 {
 public:
     virtual void setHeight(double x){height =x;}
