@@ -11,6 +11,7 @@ int main()
 
     console.addHandler(std::unique_ptr<CommandHandler>(new Quitter));
     console.addHandler(std::unique_ptr<CommandHandler>(new Printer));
+    console.addHandler(std::unique_ptr<CommandHandler>(new Sum));
 
     console.run();
     return 0;
