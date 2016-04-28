@@ -1,4 +1,4 @@
-#include <PicturesLibrary.hpp>
+include <PicturesLibrary.hpp>
 
 namespace PicturesLibrary
 {
