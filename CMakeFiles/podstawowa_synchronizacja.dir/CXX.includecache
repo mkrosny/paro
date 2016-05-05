@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nokia/Pobrane/thread/podstawowa_synchronizacja.cpp
+thread
+-
+vector
+-
+string
+-
+typeinfo
+-
+iostream
+-
+boost/lexical_cast.hpp
+-
+

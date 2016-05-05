@@ -1,0 +1,7 @@
+/home/nokia/Pobrane/thread/CMakeFiles/argumenty_watku.dir
+/home/nokia/Pobrane/thread/external/CMakeFiles/external.dir
+/home/nokia/Pobrane/thread/CMakeFiles/obiad.dir
+/home/nokia/Pobrane/thread/CMakeFiles/podstawowa_synchronizacja.dir
+/home/nokia/Pobrane/thread/CMakeFiles/przekazywanie_przez_kolejke.dir
+/home/nokia/Pobrane/thread/CMakeFiles/stworzenie_watku.dir
+/home/nokia/Pobrane/thread/CMakeFiles/wyjatki.dir

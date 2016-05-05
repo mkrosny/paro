@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nokia/Pobrane/thread/Queue.hpp
+queue
+-
+
+/home/nokia/Pobrane/thread/przekazywanie_przez_kolejke.cpp
+thread
+-
+typeinfo
+-
+iostream
+-
+Queue.hpp
+/home/nokia/Pobrane/thread/Queue.hpp
+isPrime.hpp
+/home/nokia/Pobrane/thread/isPrime.hpp
+
+external/isPrime.hpp
+

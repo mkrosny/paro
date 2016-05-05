@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nokia/Pobrane/thread/wyjatki.cpp
+thread
+-
+iostream
+-
+ThreadGuard.hpp
+/home/nokia/Pobrane/thread/ThreadGuard.hpp
+
+external/ThreadGuard.hpp
+thread
+-
+
