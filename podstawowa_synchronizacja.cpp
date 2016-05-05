@@ -8,18 +8,18 @@
 #include <mutex>
 std::string output;
 std::mutex output_mutex;
-
+using Lock =  std::lock_guard<std::mutex>;
 void addLines(unsigned count)
 {
+  
   const auto id = boost::lexical_cast<std::string>( std::this_thread::get_id() );
   for(unsigned i=0; i<count; ++i)
   {
-    output_mutex.lock();
+    Lock lock(output_mutex);
     output += id;
     output += ": #";
     output += std::to_string(i);
     output += "\n";
-    output_mutex.unlock();
   }
 }
 
