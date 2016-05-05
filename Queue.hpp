@@ -1,3 +1,5 @@
+//TODO TEMPLATE, top: mutex (poza funkcja, dla pop, zeby dana nie byla zdjeta przed podejrzeniem)
+
 #pragma once
 #include <queue>
 
@@ -31,7 +33,7 @@ public:
   {
     Lock lk(m);
     q_.push(v);
-    cv.notify_one();
+    cv.notify_all();
   }
 
   value_type pop()
@@ -43,6 +45,13 @@ public:
     return tmp;
   }
 
+  value_type top()
+  {
+    Lock lk(m);
+    cv.wait(lk, [&]{return not empty();});
+    const auto tmp = q_.front();
+    return tmp;
+  }
   // size_type size() const
   // {
   //   return q_.size();
