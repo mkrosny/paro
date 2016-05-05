@@ -3,7 +3,6 @@
 #include <iostream>
 #include "Queue.hpp"
 #include "isPrime.hpp"
-
 constexpr auto range = 1000u*1000u;
 Queue queue;
 
@@ -19,8 +18,8 @@ void consumer()
 {
   for(unsigned i=0; i<range; ++i)
   {
-    while( queue.empty() )
-    { }
+    // while( queue.empty() )
+    // { }
     const auto e = queue.pop();
     std::cout << e.n_ << " is " << (e.isPrime_?"":"not ") << "a prime number" << std::endl;
   }

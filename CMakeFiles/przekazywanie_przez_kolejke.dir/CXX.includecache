@@ -9,6 +9,10 @@
 /home/nokia/Pobrane/thread/Queue.hpp
 queue
 -
+mutex
+-
+condition_variable
+-
 
 /home/nokia/Pobrane/thread/przekazywanie_przez_kolejke.cpp
 thread
