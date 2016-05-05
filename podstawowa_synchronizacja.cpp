@@ -5,18 +5,21 @@
 #include <iostream>
 #include <boost/lexical_cast.hpp>
 
+#include <mutex>
 std::string output;
-
+std::mutex output_mutex;
 
 void addLines(unsigned count)
 {
   const auto id = boost::lexical_cast<std::string>( std::this_thread::get_id() );
   for(unsigned i=0; i<count; ++i)
   {
+    output_mutex.lock();
     output += id;
     output += ": #";
     output += std::to_string(i);
     output += "\n";
+    output_mutex.unlock();
   }
 }
 
@@ -26,7 +29,7 @@ int main()
 {
   try
   {
-    constexpr auto threadsCount = 3;
+    constexpr auto threadsCount = 300;
     constexpr auto iterations   = 40;
 
     std::vector<std::thread> threads;
