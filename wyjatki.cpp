@@ -10,6 +10,7 @@ int main()
   try
   {
     std::thread t(&foo);
+    thread_guard guard(t);
     bar();
     t.join();
   }
